@@ -10,4 +10,6 @@ $ git clone https://github.com/KindoLHaxor/env
 
 $ cd env
 
-$ bash env.sh
+$ bash env.sh for /.env
+
+$ bash envz.sh for /.env and /phpMyAdmin
