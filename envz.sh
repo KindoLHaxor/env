@@ -15,7 +15,7 @@ printf "
 ${lightgreen}
 =============/////==================\n
 root@Love :~$ KindoL ~ 13CHMOD37
-[x] Laravel ./env Massed\n
+[x] Laravel ./env & phpMyAdmin Massed\n
 =============/////==================\n
 ${red}list.txt : http://site.com / site.com
 \n
