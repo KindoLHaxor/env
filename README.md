@@ -1,5 +1,5 @@
-# Env massed
-Missconfiguration laravel env massed site 
+# Env phpMyAdmin Bot Massed
+Missconfiguration laravel env & phpMyAdmin massed site 
 
 Example site :
 https://blp.tangerangkab.go.id/.env
